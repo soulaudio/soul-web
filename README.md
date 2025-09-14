@@ -1,2 +1,3 @@
-# soul-web
-Soul Audio's website
+# Soul Audio
+
+Website of Soul Audio.
