@@ -1,10 +1,293 @@
 .container {
+  min-height: 100vh;
+  background: #1e4e29;
+  padding: 20px;
+}
+
+.contentContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 38px 48px 38px;
+}
+
+.logoContainer {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 48px;
+}
+
+.logoContainer img {
   height: 100%;
   width: 100%;
+}
+
+.title {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 48px;
+  width: 100%;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+/* Genre Filter Styles */
+.genreContainer {
+  width: 100%;
+  max-width: 80rem;
+}
+
+.genreFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.genreButton {
+  padding: 12px 20px;
+  border-radius: 9999px;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9575rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.genreButtonActive {
+  background-color: white;
+  color: #166534;
+  border-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+.genreButtonInactive {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+}
+
+.genreButtonInactive:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Albums Section */
+.albumsSection {
+  padding: 0 32px 64px 32px;
+}
+
+.albumsContainer {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.albumsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+@media (min-width: 1024px) {
+  .albumsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}
+
+/* Album Card */
+.albumCard {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  gap: 32px;
+  cursor: pointer;
+}
 
-  background-color: #1e4e29;
+.albumCard:hover .vinylRecord {
+  transform: scale(1.05);
+}
+
+.albumCard:hover .albumTitle {
+  color: #e5e7eb;
+}
+
+/* Vinyl Record */
+.vinylContainer {
+  flex-shrink: 0;
+}
+
+.vinylRecord {
+  width: 192px;
+  height: 192px;
+  background-color: black;
+  border-radius: 50%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .vinylRecord {
+    width: 224px;
+    height: 224px;
+  }
+}
+
+.albumCover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .albumCover {
+    width: 144px;
+    height: 144px;
+  }
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.innerRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background-color: #111827;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #374151;
+}
+
+@media (min-width: 1024px) {
+  .innerRing {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.centerHole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-color: #166534;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  z-index: 10;
+}
+
+/* Vinyl Grooves */
+.groove1 {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #374151;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.groove2 {
+  position: absolute;
+  inset: 24px;
+  border: 1px solid #374151;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.groove3 {
+  position: absolute;
+  inset: 36px;
+  border: 1px solid #374151;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.groove4 {
+  position: absolute;
+  inset: 48px;
+  border: 1px solid #374151;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+/* Album Info */
+.albumInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.albumTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  line-height: 1.1;
+  color: white;
+  transition: color 0.3s ease;
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .albumTitle {
+    font-size: 1.875rem;
+  }
+}
+
+.artistName {
+  color: #d1d5db;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .artistName {
+    font-size: 1.25rem;
+  }
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.emptyStateText {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin: 0 0 8px 0;
+}
+
+.emptyStateSubtext {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
 }
