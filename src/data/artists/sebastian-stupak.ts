@@ -4,7 +4,7 @@ export const sebastianStupak: Artist = {
   name: "Sebastián Stupák",
   location: "Brno, Czechia",
   profileImage: "/images/artists/sebastian-stupak/profile.jpg",
-  bio: "Piano and ambient composer. Seeking experimental, game, and film music projects. Inspired by Ryuichi Sakamoto, Joe Hisaishi, Takeshi Kokubo, and game composers like Russell Brower (World of Warcraft).",
+  bio: "Piano and ambient composer. Seeking experimental, game, and film music projects. Inspired by Ryuichi Sakamoto, Joe Hisaishi, Takeshi Kokubo, and game composers like Russell Browers, Christopher Tin, C418, Yu-Peng Chen.",
   style: {
     backgroundColor: "#e8eff2",
     textColor: "#2c4451",
