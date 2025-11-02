@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
 }
 
@@ -13,21 +12,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
   color: white;
 }
 
 .logoContainer {
   height: 250px;
   width: 250px;
-
   margin-right: 48px;
 }
 
 .logoContainer img {
   height: 100%;
   width: 100%;
-
   rotate: -70deg;
 }
 
@@ -37,7 +33,6 @@
   list-style: none;
   padding: 0;
   margin: 0;
-
   font-family: "Inter";
   font-weight: 600;
   font-size: 3.3rem;
@@ -61,32 +56,69 @@
   padding: 10px 15px;
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
+/* --- Smooth & stable hover dot animation --- */
 .menuIcon {
-  font-size: 0.9em;
-  transition: all 0.2s ease;
-}
-
-.menuLink:hover .menuIcon {
-  color: transparent;
   position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: 0.9em;
+  text-align: center;
 }
 
-.menuLink:hover .menuIcon::after {
+/* Default circle (○) */
+.menuIcon::before {
+  content: "○";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Filled circle (●), hidden by default */
+.menuIcon::after {
   content: "●";
   position: absolute;
   left: 0;
   top: 0;
-  color: white;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover state: fade out hollow, fade in filled */
+.menuLink:hover .menuIcon::before {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.menuLink:hover .menuIcon::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Optional: make the circle brighten slightly */
+.menuLink:hover {
+  color: #ffffff;
+}
+
+/* Accessibility: reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+  .menuIcon::before,
+  .menuIcon::after {
+    transition: none;
+  }
 }
 
 @media (max-width: 860px) {
   .contentContainer {
     flex-direction: column;
     align-items: center;
-
     max-width: 420px;
     width: 100%;
     min-width: 280px;
@@ -101,7 +133,6 @@
     font-weight: 600;
     font-size: 2.2rem;
     line-height: 20px;
-
     width: 100%;
   }
 
@@ -111,5 +142,5 @@
 
   .menuIcon {
     font-size: 0.8em;
-  } 
+  }
 }
