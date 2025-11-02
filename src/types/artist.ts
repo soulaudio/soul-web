@@ -10,6 +10,13 @@ export interface ArtistWork {
   isCollaboration?: boolean;
 }
 
+export interface ArtistStyle {
+  backgroundColor?: string;
+  textColor?: string;
+  primaryFont?: string;
+  secondaryFont?: string;
+}
+
 export interface Artist {
   name: string;
   profileImage: string;
@@ -19,6 +26,7 @@ export interface Artist {
   portfolio: ArtistWork[];
   collaborators?: Collaborator[];
   links?: ArtistLinks;
+  style?: ArtistStyle;
 }
 
 export interface Collaborator {

@@ -74,7 +74,14 @@ const Artist = () => {
     .sort((a, b) => new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime());
 
   return (
-    <div className={styles.page}>
+    <div 
+      className={styles.page}
+      style={{
+        backgroundColor: artist.style?.backgroundColor || '#ffffff',
+        color: artist.style?.textColor || '#1a1a1a',
+        fontFamily: artist.style?.primaryFont || 'inherit'
+      }}
+    >
       <Helmet>
         <title>{artist.name} | Soul Audio</title>
         <meta name="description" content={artist.bio} />
@@ -85,6 +92,30 @@ const Artist = () => {
           <link rel="canonical" href={artist.links.website} />
         )}
       </Helmet>
+
+      {/* Header with Logo */}
+      <header className={styles.header}>
+        <Link to="/" className={styles.logoLink}>
+          <div 
+            className={styles.logoImage}
+            role="img"
+            aria-label="Soul Audio logo"
+            style={{
+              color: artist.style?.textColor || '#1a1a1a',
+              WebkitMask: 'url(/soul-audio-512x512.svg) no-repeat center',
+              WebkitMaskSize: 'contain',
+              mask: 'url(/soul-audio-512x512.svg) no-repeat center',
+              maskSize: 'contain'
+            }}
+          />
+          <span 
+            className={styles.logoText}
+            style={{ fontFamily: artist.style?.secondaryFont || artist.style?.primaryFont || 'inherit' }}
+          >
+            Soul Audio
+          </span>
+        </Link>
+      </header>
 
       <div className={styles.layout}>
         
@@ -220,7 +251,6 @@ const Artist = () => {
               <div className={styles.timeline}>
                 {portfolioWithProjects.map((work, index) => (
                   <div key={index} className={styles.timelineItem}>
-                    <div className={styles.timelineDot} />
                     <div className={styles.timelineContent}>
                       <div className={styles.releaseCard}>
                         <div className={styles.releaseCoverWrapper}>

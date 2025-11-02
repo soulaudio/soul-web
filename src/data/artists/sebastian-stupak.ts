@@ -5,6 +5,12 @@ export const sebastianStupak: Artist = {
   location: "Brno, Czechia",
   profileImage: "/images/artists/sebastian-stupak/profile.jpg",
   bio: "Piano and ambient composer. Interested in experimental and film music.",
+  style: {
+    backgroundColor: "#e8eff2",
+    textColor: "#2c4451",
+    primaryFont: "'Crimson Text', 'Georgia', serif",
+    secondaryFont: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+  },
   gallery: [],
   portfolio: [
     {

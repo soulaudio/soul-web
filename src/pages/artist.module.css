@@ -4,12 +4,62 @@
   color: #1a1a1a;
 }
 
+/* Header */
+.header {
+  padding: 16px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  color: inherit;
+}
+
+.logoLink:hover {
+  opacity: 0.7;
+  color: inherit;
+}
+
+.logoLink:focus {
+  outline: none;
+  color: inherit;
+}
+
+.logoLink:visited {
+  color: inherit;
+}
+
+.logoLink:active {
+  color: inherit;
+}
+
+.logoImage {
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+}
+
+.logoText {
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+}
+
 .layout {
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 80px;
-  padding: 80px 40px;
+  gap: 60px;
+  padding: 60px 40px;
 }
 
 /* Sidebar - Profile */
@@ -27,13 +77,16 @@
   position: relative;
   width: 200px;
   height: 200px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .profileImagePlaceholder {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  background: currentColor;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
 }
 
 .profileImage {
@@ -55,31 +108,34 @@
 
 .artistName {
   font-size: 28px;
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
   font-weight: 600;
-  color: #1a1a1a;
+  color: inherit;
   letter-spacing: -0.5px;
   line-height: 1.2;
 }
 
 .location {
   font-size: 14px;
-  color: #666;
-  margin: 0 0 20px 0;
+  color: inherit;
+  opacity: 0.6;
+  margin: 0 0 12px 0;
   font-weight: 400;
 }
 
 .bio {
-  color: #4a4a4a;
+  color: inherit;
+  opacity: 0.8;
   line-height: 1.6;
   font-size: 15px;
   margin: 0;
 }
 
 .links {
-  margin-top: 32px;
-  padding-top: 20px;
-  border-top: 1px solid #e0e0e0;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid currentColor;
+  border-top-color: color-mix(in srgb, currentColor 15%, transparent);
 }
 
 .linksTitle {
@@ -87,8 +143,9 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #999;
-  margin: 0 0 16px 0;
+  color: inherit;
+  opacity: 0.5;
+  margin: 0 0 12px 0;
 }
 
 .linksList {
@@ -98,26 +155,27 @@
 }
 
 .linksList li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .linkItem {
-  color: #1a1a1a;
+  color: inherit;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
   display: inline-block;
 }
 
 .linkItem:hover {
-  color: #666;
+  opacity: 0.6;
 }
 
 .collaborators {
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid #e0e0e0;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid currentColor;
+  border-top-color: color-mix(in srgb, currentColor 15%, transparent);
 }
 
 .collaboratorsTitle {
@@ -125,8 +183,9 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #999;
-  margin: 0 0 16px 0;
+  color: inherit;
+  opacity: 0.5;
+  margin: 0 0 12px 0;
 }
 
 .collaboratorsList {
@@ -136,20 +195,20 @@
 }
 
 .collaboratorsList li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .collaboratorLink {
-  color: #1a1a1a;
+  color: inherit;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
   display: inline-block;
 }
 
 .collaboratorLink:hover {
-  color: #666;
+  opacity: 0.6;
 }
 
 /* Main Content */
@@ -160,7 +219,7 @@
 
 /* Gallery Section */
 .gallerySection {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .gallery {
@@ -177,11 +236,16 @@
 .galleryItem {
   cursor: pointer;
   overflow: hidden;
-  border-radius: 4px;
-  background-color: #f5f5f5;
+  background-color: currentColor;
+  opacity: 0.05;
   aspect-ratio: 1;
   position: relative;
   transition: transform 0.2s ease;
+}
+
+.galleryItem {
+  opacity: 1;
+  background-color: color-mix(in srgb, currentColor 5%, transparent);
 }
 
 .galleryItem:hover {
@@ -203,60 +267,40 @@
 
 /* Timeline Section */
 .timelineSection {
-  margin-top: 40px;
+  margin-top: 24px;
 }
 
 .sectionTitle {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #999;
-  margin: 0 0 48px 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: inherit;
+  opacity: 0.7;
+  margin: 0 0 32px 0;
+  font-style: italic;
 }
 
 .timeline {
   position: relative;
-  padding-left: 40px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 4px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, #e0e0e0, transparent);
 }
 
 .timelineItem {
   position: relative;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 .timelineItem:last-child {
   margin-bottom: 0;
 }
 
-.timelineDot {
-  position: absolute;
-  left: -40px;
-  top: 8px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: #1a1a1a;
-  border: 2px solid #ffffff;
-}
-
 .timelineContent {
-  padding-left: 8px;
+  padding-left: 0;
 }
 
 .releaseCard {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   align-items: flex-start;
 }
 
@@ -270,8 +314,8 @@
   height: 120px;
   min-width: 120px;
   min-height: 120px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  background: currentColor;
+  opacity: 0.1;
 }
 
 .releaseCover {
@@ -283,12 +327,6 @@
   min-width: 120px;
   min-height: 120px;
   object-fit: cover;
-  border-radius: 4px;
-  transition: transform 0.2s ease;
-}
-
-.releaseCard:hover .releaseCover {
-  transform: scale(1.05);
 }
 
 .releaseInfo {
@@ -298,16 +336,17 @@
 
 .releaseDate {
   font-size: 13px;
-  color: #999;
-  margin-bottom: 8px;
+  color: inherit;
+  opacity: 0.5;
+  margin-bottom: 6px;
   font-weight: 500;
 }
 
 .releaseTitle {
   font-size: 20px;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   font-weight: 600;
-  color: #1a1a1a;
+  color: inherit;
   line-height: 1.3;
   display: flex;
   align-items: center;
@@ -317,61 +356,68 @@
 
 .collaborationBadge {
   display: inline-block;
-  padding: 4px 10px;
-  background-color: #f5f5f5;
+  padding: 3px 8px;
+  background-color: transparent;
+  border: 1px solid currentColor;
   border-radius: 12px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #666;
+  color: inherit;
+  opacity: 0.6;
 }
 
 .releaseMeta {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
 
 .releaseType,
 .releaseGenre {
   font-size: 13px;
-  color: #666;
+  color: inherit;
+  opacity: 0.6;
 }
 
 .releaseRole {
   font-size: 13px;
-  color: #666;
+  color: inherit;
+  opacity: 0.6;
   font-weight: 500;
 }
 
 .separator {
-  color: #d0d0d0;
+  color: inherit;
+  opacity: 0.3;
   font-size: 13px;
 }
 
 .releaseGenre {
   font-size: 12px;
-  color: #999;
-  margin-bottom: 12px;
+  color: inherit;
+  opacity: 0.5;
+  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: block;
 }
 
 .releaseDescription {
-  color: #4a4a4a;
+  color: inherit;
+  opacity: 0.8;
   font-size: 14px;
   line-height: 1.6;
-  margin: 0 0 16px 0;
+  margin: 0 0 12px 0;
 }
 
 .releaseBandcampLink {
   display: inline-flex;
   align-items: center;
-  color: #1a1a1a;
+  color: inherit;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -401,7 +447,6 @@
   max-width: 90%;
   max-height: 90vh;
   object-fit: contain;
-  border-radius: 4px;
 }
 
 .carouselButton {
@@ -462,10 +507,23 @@
 
 /* Mobile Responsive - Single Breakpoint */
 @media (max-width: 1024px) {
+  .header {
+    padding: 12px 24px;
+  }
+
+  .logoImage {
+    width: 22px;
+    height: 22px;
+  }
+
+  .logoText {
+    font-size: 13px;
+  }
+
   .layout {
     flex-direction: column;
-    gap: 48px;
-    padding: 40px 24px;
+    gap: 32px;
+    padding: 32px 24px;
   }
 
   .sidebar {
@@ -481,7 +539,7 @@
   }
 
   .profileImageWrapper {
-    margin: 0 auto 24px;
+    margin: 0 auto 16px;
 
     display: flex;
     align-items: center;
@@ -507,8 +565,8 @@
   }
 
   .links {
-    margin-top: 24px;
-    padding-top: 20px;
+    margin-top: 16px;
+    padding-top: 16px;
     width: 100%;
     text-align: left;
   }
@@ -520,8 +578,8 @@
   }
 
   .collaborators {
-    margin-top: 24px;
-    padding-top: 20px;
+    margin-top: 16px;
+    padding-top: 16px;
     width: 100%;
     text-align: left;
   }
@@ -538,11 +596,7 @@
   }
 
   .timeline {
-    padding-left: 32px;
-  }
-
-  .timelineDot {
-    left: -32px;
+    padding-left: 0;
   }
 
   .releaseCard {
@@ -585,6 +639,10 @@
 }
 
 @media (max-width: 640px) {
+  .header {
+    padding: 12px 16px;
+  }
+
   .layout {
     padding: 24px 16px;
   }
@@ -594,10 +652,6 @@
   }
 
   .timeline {
-    padding-left: 24px;
-  }
-
-  .timelineDot {
-    left: -24px;
+    padding-left: 0;
   }
 }

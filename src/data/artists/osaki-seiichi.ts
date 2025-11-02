@@ -5,6 +5,12 @@ export const osakiSeiichi: Artist = {
   location: "Nagoya, Japan",
   profileImage: "/images/artists/osaki-seiichi/profile.jpg",
   bio: "Creating ambient, progressive and experimental art and connecting it through multiple medias. Exploring themes of adventure, storytelling, and cinematic ambient textures.",
+  style: {
+    backgroundColor: "#f2e8d5",
+    textColor: "#4a6b1f",
+    primaryFont: "'Imbue', 'Crimson Text', 'Georgia', serif",
+    secondaryFont: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+  },
   gallery: [],
   portfolio: [
     {
