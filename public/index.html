@@ -20,6 +20,20 @@
     <meta name="description" content="Website of Soul Audio" />
 
     <title>Soul Audio</title>
+
+    <!-- Hash to Path Redirect Script for Backwards Compatibility -->
+    <script>
+      // Redirect hash-based URLs to path-based URLs
+      (function() {
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#/')) {
+          const path = hash.substring(1);
+          // Remove hash and navigate to path
+          const newUrl = window.location.pathname + path + window.location.search;
+          window.history.replaceState(null, '', newUrl);
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -1,12 +1,15 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./pages/home";
 import Label from "./pages/label";
 import Artist from "./pages/artist";
 import NotFound from "./pages/not-found";
+import HashRedirect from "./hash-redirect";
 
 const App = () => {
   return (
     <Router>
+      <HashRedirect />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/label" element={<Label />} />
