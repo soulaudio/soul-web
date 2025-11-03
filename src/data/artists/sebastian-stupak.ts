@@ -11,7 +11,32 @@ export const sebastianStupak: Artist = {
     primaryFont: "'Crimson Text', 'Georgia', serif",
     secondaryFont: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
   },
-  gallery: [],
+  gallery: [
+    {
+      url: "/images/artists/sebastian-stupak/gallery/gallery-01.jpg",
+      span: 1,
+    },
+    {
+      url: "/images/artists/sebastian-stupak/gallery/gallery-02.jpg",
+      span: 1,
+    },
+    {
+      url: "/images/artists/sebastian-stupak/gallery/gallery-03.jpg",
+      span: 1,
+    },
+    {
+      url: "/images/artists/sebastian-stupak/gallery/gallery-04.jpg",
+      span: 1,
+    },
+    {
+      url: "/images/artists/sebastian-stupak/gallery/gallery-05.jpg",
+      span: 1,
+    },
+    {
+      url: "/images/artists/sebastian-stupak/gallery/gallery-06.jpg",
+      span: 1,
+    },
+  ],
   portfolio: [
     {
       projectId: "in-the-footsteps-jungle-temple",

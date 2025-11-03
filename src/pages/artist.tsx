@@ -14,11 +14,23 @@ const Artist = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const [profileLoaded, setProfileLoaded] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     setLoadedImages(new Set());
     setProfileLoaded(false);
   }, [id]);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   if (!artist) {
     return <NotFound />;
@@ -305,14 +317,6 @@ const Artist = () => {
       {/* Carousel Modal */}
       {selectedImage && (
         <div className={styles.carouselOverlay} onClick={closeCarousel}>
-          <button
-            onClick={(e) => { e.stopPropagation(); prevImage(); }}
-            className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
-            aria-label="Previous image"
-          >
-            ‹
-          </button>
-          
           <img 
             src={selectedImage} 
             alt="Carousel"
@@ -320,13 +324,45 @@ const Artist = () => {
             onClick={(e) => e.stopPropagation()}
           />
           
-          <button
-            onClick={(e) => { e.stopPropagation(); nextImage(); }}
-            className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
-            aria-label="Next image"
-          >
-            ›
-          </button>
+          {isMobile ? (
+            // Mobile layout: buttons underneath image
+            <div className={styles.carouselNavigation}>
+              <button
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+              
+              <button
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
+                aria-label="Next image"
+              >
+                ›
+              </button>
+            </div>
+          ) : (
+            // Desktop layout: buttons on sides
+            <>
+              <button
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+              
+              <button
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
+                aria-label="Next image"
+              >
+                ›
+              </button>
+            </>
+          )}
 
           <button
             onClick={closeCarousel}
