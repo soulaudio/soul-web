@@ -1,6 +1,15 @@
 import { ProjectsData } from "../types/project";
 
 export const projectsData: ProjectsData = {
+  "mirror": {
+    id: "mirror",
+    title: "Mirror",
+    releaseDate: "2025-11-04",
+    type: "EP",
+    genre: "Piano / Experimental / Ambient",
+    cover: "/images/artists/sebastian-stupak/projects/mirror.jpg",
+    bandcampUrl: "https://sebastianstupak.bandcamp.com/album/mirror" 
+  },
   "in-the-footsteps-jungle-temple": {
     id: "in-the-footsteps-jungle-temple",
     title: "In The Footsteps Of A Lost Book Hidden In The Jungle Temple",

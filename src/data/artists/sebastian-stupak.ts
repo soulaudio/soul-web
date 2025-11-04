@@ -39,6 +39,11 @@ export const sebastianStupak: Artist = {
   ],
   portfolio: [
     {
+      projectId: "mirror",
+      role: "Artist, Composer, Producer",
+      description: "A 6-track experimental EP featuring compositions that explore the concept of a broken mirror."
+    },
+    {
       projectId: "in-the-footsteps-jungle-temple",
       role: "Co-Composer, Sound Design, Writing, Coding",
       description: "Composing, sound designing and story writing in collaboration with Osaki Seiichi and Peter Petrek. Design and coding website to drive story-telling."
@@ -52,7 +57,7 @@ export const sebastianStupak: Artist = {
     {
       projectId: "pressures-father-i-sober",
       role: "Artist, Composer, Producer",
-      description: "Solo 5 part, 31-track album full of piano and ambient compositions and miniatures."
+      description: "A 5 part, 31-track album full of piano and ambient compositions and miniatures."
     },
     {
       projectId: "sunken-city-cassette",
