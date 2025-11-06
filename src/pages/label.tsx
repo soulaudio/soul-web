@@ -10,6 +10,20 @@ const Label = () => {
   const musicConfig = {
     albums: [
       {
+        id: "mirror",
+        title: "Mirror",
+        artist: "Sebastián Stupák",
+        genres: ["Piano"],
+        coverColor: "#a26560ff",
+      },
+      {
+        id: "in-the-footsteps-jungle-temple",
+        title: "In The Footsteps Of A Lost Book Hidden In The Jungle Temple",
+        artist: "Osaki Seiichi",
+        genres: ["Ambient"],
+        coverColor: "#99de64ff",
+      },
+      {
         id: "sunken-city-album",
         title: "The Tale Of A Long Forgotten Sunken City",
         artist: "Osaki Seiichi",
