@@ -10,6 +10,13 @@ const Label = () => {
   const musicConfig = {
     albums: [
       {
+        id: "slower-days",
+        title: "slower days",
+        artist: "Sebastián Stupák",
+        genres: ["Piano", "Ambient"],
+        coverColor: "#93a24a",
+      },
+      {
         id: "mirror",
         title: "Mirror",
         artist: "Sebastián Stupák",

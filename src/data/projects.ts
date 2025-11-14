@@ -1,6 +1,15 @@
 import { ProjectsData } from "../types/project";
 
 export const projectsData: ProjectsData = {
+  "slower-days": {
+    id: "slower-days",
+    title: "slower days",
+    releaseDate: "2025-11-14",
+    type: "Album",
+    genre: "Piano / Ambient / Cinematic",
+    cover: "/images/artists/sebastian-stupak/projects/slower-days.jpg",
+    bandcampUrl: "https://sebastianstupak.bandcamp.com/album/slower-days" 
+  },
   "mirror": {
     id: "mirror",
     title: "Mirror",

@@ -39,6 +39,11 @@ export const sebastianStupak: Artist = {
   ],
   portfolio: [
     {
+      projectId: "slower-days",
+      role: "Artist, Composer, Producer",
+      description: "A 14-track cinematic piano and ambient compositions. Trying to reproduce the feelings of nostalgia. Inspired by C418 compositions."
+    },
+    {
       projectId: "mirror",
       role: "Artist, Composer, Producer",
       description: "A 6-track experimental EP featuring compositions that explore the concept of a broken mirror."
