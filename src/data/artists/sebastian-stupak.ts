@@ -39,6 +39,11 @@ export const sebastianStupak: Artist = {
   ],
   portfolio: [
     {
+      projectId: "down-below-the-surface",
+      role: "Artist, Composer, Producer",
+      description: "An 8-track cinematic piano and ambient compositions. Used in a game jam project, repurposed as an EP."
+    },
+    {
       projectId: "slower-days",
       role: "Artist, Composer, Producer",
       description: "A 14-track cinematic piano and ambient compositions. Trying to reproduce the feelings of nostalgia. Inspired by C418 compositions."

@@ -10,6 +10,13 @@ const Label = () => {
   const musicConfig = {
     albums: [
       {
+        id: "down-below-the-surface",
+        title: "Down, Below the Surface",
+        artist: "Sebastián Stupák",
+        genres: ["Piano", "Ambient"],
+        coverColor: "#2a5671",
+      },
+      {
         id: "slower-days",
         title: "slower days",
         artist: "Sebastián Stupák",

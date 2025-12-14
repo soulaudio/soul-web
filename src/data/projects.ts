@@ -1,6 +1,15 @@
 import { ProjectsData } from "../types/project";
 
 export const projectsData: ProjectsData = {
+  "down-below-the-surface": {
+    id: "down-below-the-surface",
+    title: "Down, Below the Surface",
+    releaseDate: "2025-12-15",
+    type: "EP",
+    genre: "Piano / Ambient / Cinematic",
+    cover: "/images/artists/sebastian-stupak/projects/down-below-the-surface.jpg",
+    bandcampUrl: "https://sebastianstupak.bandcamp.com/album/down-below-the-surface" 
+  },
   "slower-days": {
     id: "slower-days",
     title: "slower days",
