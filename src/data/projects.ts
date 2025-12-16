@@ -21,7 +21,7 @@ export const projectsData: ProjectsData = {
   },
   "mirror": {
     id: "mirror",
-    title: "Mirror",
+    title: "mirror",
     releaseDate: "2025-11-04",
     type: "EP",
     genre: "Piano / Experimental / Ambient",

@@ -25,7 +25,7 @@ const Label = () => {
       },
       {
         id: "mirror",
-        title: "Mirror",
+        title: "mirror",
         artist: "Sebastián Stupák",
         genres: ["Piano"],
         coverColor: "#a26560ff",
